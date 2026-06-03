@@ -1,3 +1,4 @@
 .claude/
-docs/
 fpt/
+.cache/
+.pytest_cache/

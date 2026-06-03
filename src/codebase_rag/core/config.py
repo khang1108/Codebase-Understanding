@@ -12,5 +12,5 @@ class Settings(BaseSettings):
     embedding_model_name: str
     llm_name: str
 
-    embdding_batch_size: int
+    embedding_batch_size: int
     device: str = "cpu"

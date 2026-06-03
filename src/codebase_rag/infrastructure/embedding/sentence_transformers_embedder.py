@@ -5,7 +5,6 @@ import numpy as np
 
 from functools import cached_property
 from sentence_transformers import SentenceTransformer
-from pathlib import Path
 
 from codebase_rag.core.config import Settings, CACHE_MODEL_PATH
 from codebase_rag.domain.embedding_port import IEmbeddingPort
@@ -20,14 +19,17 @@ class STEmbedder:
     by the sentence-transformers library. 
     """
 
-    def __init__(self, model_name, batch_size, device):
+    def __init__(self, 
+                model_name: str, 
+                batch_size: int, 
+                device: str):
         self.model_name = model_name
         self.device = device
         self.batch_size = batch_size
         self.cache_path = CACHE_MODEL_PATH
 
     @classmethod
-    def load_from_settings(cls, setting: Settings) -> STEmbedder:
+    def from_settings(cls, setting: Settings) -> STEmbedder:
         return cls(
             model_name=setting.embedding_model_name,
             batch_size=setting.embdding_batch_size,
