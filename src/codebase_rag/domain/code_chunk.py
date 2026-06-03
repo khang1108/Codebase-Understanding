@@ -16,7 +16,7 @@ class CodeChunk(BaseModel):
         field_path: str
         language: str
         start_line: int
-        end_line: str
+        end_line: int
         text: str
         repo_name: str
     """
