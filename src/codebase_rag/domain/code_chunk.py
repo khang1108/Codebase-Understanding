@@ -12,7 +12,13 @@ class CodeChunk(BaseModel):
     CodeChunk là data model thống nhất chứa các thông tin cho một chunk source code bất kỳ. 
 
     Attributes:
-        chunk
+        chunk_id: str
+        field_path: str
+        language: str
+        start_line: int
+        end_line: str
+        text: str
+        repo_name: str
     """
     # Lưu chunk_id theo dạng đường dẫn và dòng sẽ bổ sung đầy đủ thông tin hơn cho một chunk, thay vì là những có số random.
     chunk_id: str = Field(examples="path/to/your/file/src.py:from_line-end_line")
