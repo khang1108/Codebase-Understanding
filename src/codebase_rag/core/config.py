@@ -6,6 +6,11 @@ from pathlib import Path
 
 ROOT_DIR = Path(__file__).parent.parent.parent.parent
 SRC_DIR = ROOT_DIR / "src"
+CACHE_MODEL_PATH: Path = ROOT_DIR / ".cache"
 
 class Settings(BaseSettings):
-    pass
+    embedding_model_name: str
+    llm_name: str
+
+    embdding_batch_size: int
+    device: str = "cpu"

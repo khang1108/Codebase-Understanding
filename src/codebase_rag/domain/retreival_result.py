@@ -23,7 +23,7 @@ class RetrievalResult(BaseModel):
     repo_name: str | None = None
 
     @classmethod
-    def _load_from_codechunk(cls, chunk: CodeChunk, score: float):
+    def load_from_codechunk(cls, chunk: CodeChunk, score: float):
         """
         Construct a RetrievalResult from CodeChunk.
 
