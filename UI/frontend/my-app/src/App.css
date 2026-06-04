@@ -1,0 +1,280 @@
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  min-height: 100vh;
+  position: relative;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 24px 28px;
+  background: linear-gradient(180deg, rgba(10, 14, 31, 0.96), rgba(8, 12, 28, 0.88));
+  border: 1px solid rgba(115, 92, 255, 0.22);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(0, 0, 0, 0.35);
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.brand-mark {
+  width: 52px;
+  height: 52px;
+  border-radius: 18px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #5b72ff, #7a41ff);
+  color: #fff;
+  font-size: 1.15rem;
+  font-weight: 700;
+  box-shadow: 0 12px 28px rgba(91, 114, 255, 0.32);
+}
+
+.brand-label {
+  color: #9db1ff;
+  font-size: 0.95rem;
+}
+
+.topbar h1 {
+  font-size: clamp(1.75rem, 2.3vw, 2.6rem);
+  color: #f3f6ff;
+  line-height: 1.05;
+}
+
+.status-badge {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(66, 204, 255, 0.16);
+  color: #b5e8ff;
+  font-size: 0.95rem;
+  border: 1px solid rgba(66, 204, 255, 0.22);
+}
+
+.workspace {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr) 340px;
+  gap: 24px;
+}
+
+.panel {
+  background: rgba(10, 16, 34, 0.94);
+  border: 1px solid rgba(138, 97, 255, 0.22);
+  border-radius: 28px;
+  box-shadow: 0 22px 58px rgba(9, 12, 27, 0.3);
+  overflow: hidden;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 24px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.panel-head h2 {
+  font-size: 1.05rem;
+  color: #f5f8ff;
+  margin-bottom: 8px;
+}
+
+.panel-head p {
+  color: #94a7dc;
+  font-size: 0.95rem;
+  max-width: 320px;
+}
+
+.section-label {
+  color: #8dc9ff;
+  font-size: 0.9rem;
+  display: inline-flex;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(48, 216, 255, 0.12);
+}
+
+.chip {
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(127, 92, 255, 0.16);
+  color: #d3d9ff;
+  font-size: 0.95rem;
+  white-space: nowrap;
+}
+
+.folders {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 18px 0 22px;
+}
+
+.folder-group {
+  padding: 0 24px;
+}
+
+.folder-group h3 {
+  font-size: 0.88rem;
+  color: #7fbcff;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
+.folder-group ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 10px;
+}
+
+.folder-group li {
+  padding: 14px 16px;
+  border-radius: 18px;
+  color: #d7dfff;
+  background: rgba(255, 255, 255, 0.02);
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.2s ease;
+  display: grid;
+  gap: 4px;
+}
+
+.folder-group li:hover {
+  background: rgba(127, 92, 255, 0.12);
+  transform: translateX(2px);
+}
+
+.folder-group li.active {
+  background: rgba(127, 92, 255, 0.18);
+  border-left: 3px solid #7f5cff;
+}
+
+.folder-group li span {
+  font-size: 0.98rem;
+  font-weight: 500;
+}
+
+.folder-group li small {
+  display: block;
+  color: #8d9dcb;
+  font-size: 0.82rem;
+}
+
+.code-window {
+  display: flex;
+  flex-direction: column;
+  min-height: 540px;
+}
+
+.code-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 22px;
+  background: rgba(4, 8, 24, 0.95);
+  color: #94a7dc;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 0.92rem;
+}
+
+.code-window pre {
+  margin: 0;
+  padding: 24px;
+  overflow: auto;
+  background: linear-gradient(180deg, rgba(6, 12, 32, 0.98), rgba(14, 18, 45, 0.96));
+  color: #e5eaf7;
+  font-family: ui-monospace, 'Fira Code', monospace;
+  font-size: 0.95rem;
+  line-height: 1.55;
+  white-space: pre-wrap;
+  word-break: break-word;
+  flex: 1;
+}
+
+.ask-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 0 24px 24px;
+}
+
+.ask-form label {
+  color: #bfc9ff;
+  font-size: 0.95rem;
+}
+
+.ask-form textarea {
+  min-height: 160px;
+  width: 100%;
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(10, 15, 31, 0.95);
+  border: 1px solid rgba(127, 92, 255, 0.24);
+  color: #eef5ff;
+  resize: vertical;
+  font-family: ui-monospace, 'Fira Code', monospace;
+  font-size: 0.95rem;
+}
+
+.ask-form button {
+  align-self: flex-start;
+  padding: 13px 24px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(135deg, #7f5cff, #30d8ff);
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 18px 30px rgba(52, 132, 255, 0.22);
+}
+
+.ask-form button:hover {
+  transform: translateY(-1px);
+}
+
+.ask-note {
+  margin: 0 24px 24px;
+  padding: 20px 22px;
+  border-radius: 22px;
+  background: rgba(16, 23, 52, 0.86);
+  border: 1px solid rgba(127, 92, 255, 0.14);
+  color: #acb7dd;
+}
+
+.ask-note h3 {
+  margin-bottom: 10px;
+  color: #f3f7ff;
+  font-size: 1rem;
+}
+
+@media (max-width: 1180px) {
+  .workspace {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 700px) {
+  .topbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .panel-head {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .workspace {
+    gap: 18px;
+  }
+}

@@ -1,0 +1,57 @@
+:root {
+  color: #e8efff;
+  background: radial-gradient(circle at top left, rgba(71, 92, 255, 0.18), transparent 18%), radial-gradient(circle at bottom right, rgba(128, 68, 255, 0.16), transparent 20%), #04050d;
+  font-family: Inter, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.55;
+  letter-spacing: 0.02em;
+  font-weight: 400;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  min-height: 100%;
+  background: inherit;
+}
+
+body {
+  color: #e8efff;
+}
+
+#root {
+  min-height: 100vh;
+  padding: 24px;
+}
+
+h1, h2, h3, p, button, input, textarea, label {
+  margin: 0;
+}
+
+h1, h2, h3 {
+  font-family: 'Segoe UI', system-ui, sans-serif;
+}
+
+p, label {
+  color: #a9b0d6;
+}
+
+button, input, textarea {
+  font: inherit;
+}
+
+textarea {
+  font-family: ui-monospace, 'Fira Code', monospace;
+}
+
+@media (max-width: 720px) {
+  #root {
+    padding: 16px;
+  }
+}
